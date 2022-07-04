@@ -28,7 +28,7 @@ export default function Profile({ user, orders }) {
         <div>
           {orders?.map((order) => {
             return (
-              <Order>
+              <Order key={order.id}>
                 <h1>Order Number: {order.id}</h1>
                 <h2>Amount:{formatMoney(order.amount)}</h2>
                 <h2>Receipt Email: {user.email}</h2>
@@ -49,8 +49,7 @@ const Order = styled.div`
   display: flex;
   justify-content: space-between;
 
-  h1{
+  h1 {
     font-size: 1rem;
   }
 `;
-
