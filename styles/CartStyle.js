@@ -21,6 +21,11 @@ export const CartStyle = styled(motion.div)`
   padding: 2rem 5rem;
   overflow-y: auto;
   position: relative;
+
+  @media (max-width: 676px) {
+    width: 80%;
+    padding: 0.5rem;
+  }
 `;
 
 export const Card = styled(motion.div)`
@@ -35,6 +40,15 @@ export const Card = styled(motion.div)`
   img {
     width: 8rem;
   }
+
+  @media (max-width: 676px) {
+    padding: 0rem;
+    margin: 1rem 0rem;
+    justify-content: start;
+    img {
+      width: 5rem;
+    }
+  }
 `;
 
 export const CardInfo = styled(motion.div)`
@@ -42,6 +56,14 @@ export const CardInfo = styled(motion.div)`
   div {
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (max-width: 676px) {
+    width: 100%;
+    margin-left: 1rem;
+    div {
+      justify-content: space-evenly;
+    }
   }
 `;
 
@@ -63,6 +85,13 @@ export const EmptyStyle = styled(motion.div)`
   svg {
     font-size: 10rem;
     color: var(--secondary);
+  }
+
+  @media (max-width: 676px) {
+    h1 {
+      font-size: 1.8rem;
+      text-align: center;
+    }
   }
 `;
 

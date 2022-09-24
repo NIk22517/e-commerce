@@ -36,7 +36,9 @@ export default function Profile({ user, orders }) {
             );
           })}
         </div>
-        <button onClick={() => route.push("/api/auth/logout")}>Logout</button>
+        <LogOutButton onClick={() => route.push("/api/auth/logout")}>
+          Logout
+        </LogOutButton>
       </div>
     )
   );
@@ -52,4 +54,25 @@ const Order = styled.div`
   h1 {
     font-size: 1rem;
   }
+
+  @media (max-width: 676px) {
+    flex-direction: column;
+    padding: 1rem;
+
+    h1,
+    h2 {
+      font-size: 0.8rem;
+    }
+  }
+`;
+
+const LogOutButton = styled.button`
+  background: var(--primary);
+  padding: 1rem 2rem;
+  width: 100%;
+  color: white;
+  margin-top: 2rem;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 2rem;
 `;

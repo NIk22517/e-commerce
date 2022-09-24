@@ -48,7 +48,7 @@ export default function Success({ order }) {
               <div key={item.id}>
                 <p>Product: {item.description}</p>
                 <p>Quantity: {item.quantity}</p>
-                {/* <p>Price: {item.price.unit_amount}</p> */}
+                {/* <p>Price: {item.price.unit_amount / 100}</p> */}
               </div>
             ))}
           </OrderInfo>
@@ -61,7 +61,11 @@ export default function Success({ order }) {
 }
 
 const Wrapper = styled.div`
-  margin: 5rem 15rem;
+  margin: 2rem 0rem;
+
+  @media (max-width: 676px) {
+    margin: 0rem;
+  }
 `;
 
 const Card = styled(motion.div)`
@@ -85,6 +89,14 @@ const Card = styled(motion.div)`
     padding: 1rem 2rem;
     cursor: pointer;
   }
+
+  @media (max-width: 676px) {
+    padding: 1rem;
+
+    button{
+      margin-bottom: 1rem;
+    }
+  }
 `;
 
 const Address = styled.div`
@@ -98,9 +110,16 @@ const OrderInfo = styled.div`
   div {
     padding-bottom: 1rem;
   }
+  @media (max-width: 676px) {
+    margin: 1rem 0rem;
+  }
 `;
 
 const InfoWrapper = styled.div`
   display: flex;
   margin: 2rem 0rem;
+
+  @media (max-width: 676px) {
+    flex-direction: column;
+  }
 `;
